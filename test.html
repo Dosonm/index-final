@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+        function testcolor(color1,color2){
+            document.querySelector('h1').style.color=color1;
+            document.querySelector('h2').style.color=color2;  
+        }    
+        function testcolor2(color1,color2){
+            document.querySelector('h3').style.color=color1;
+            document.querySelector('h4').style.color=color2; 
+        }
+        function play(){
+            testcolor('red','blue');
+            testcolor2('green','yellow');
+        }
+        //변수선언- 전역변수/지역변수
+    </script>
+    <input type="button" value="click" onclick="play()">
+    <h1>첫째줄</h1>
+    <h2>둘째줄</h2>
+    <h3>셋째줄</h3>
+    <h4>넷째줄</h4>
+    <script>
+        var tt=3;
+        function att(){
+            document.write(tt);
+        }
+        att();
+    </script>
+</body>
+</html>

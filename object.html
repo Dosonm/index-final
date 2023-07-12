@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj={
+            'input':'output',  //'obj'라는객체 생성 프로퍼티끼리는 쉼표로 구분
+            'alpa':'beta'
+        }
+        document.write('input: '+obj.input+'<br>');
+        document.write('alpa: '+obj.alpa+'<br>');
+        obj.new='newtext'; //'obj'객체에 새로운 데이터를 넣음
+        document.write('new= '+obj.new+'<br>');
+        obj['another new']='another new text';
+        document.write('another new= '+obj['another new']+'<br>');
+
+    </script>
+    <h2>iterate</h2>
+    <script>
+        for(var key in obj){
+            document.write(key+'= '+obj[key]+'<br>');
+        }
+    </script>
+    <h3>object function</h3>
+    <script> //showall함수도 저 오브젝트 안에 들어있기 떄문에 같이 출력되는거임
+        obj.showall=function(){ 
+            for(var key in obj){
+            document.write(key+'= '+obj[key]+'<br>');
+        }
+        }
+        obj.showall();
+        </script>
+        <h3>this object function</h3>
+        <script>
+        obj.showall=function(){ 
+            for(var key in this){
+            document.write(key+'= '+this[key]+'<br>'); 
+        }
+    }
+        obj.showall();
+    </script>
+</body>
+</html>

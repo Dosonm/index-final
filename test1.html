@@ -17,37 +17,39 @@
     // let a=0; << 이건 가능함 이유는 저 함수 내에서 선언을 한거기 때문에   
     //}
     //따라서 함수를 호출하게되면 그함수로 가서 계산을 하기 때문에 전역변수로 밖에서 선언했다고 해도 의미가 없음
-    function ndhb(color1, color2){
-        let target=document.querySelector('body');
-        target.style.background=color1 ;
-        target.style.color=color2;
-    }
-    function tagwallcolor(color1, color2){
-        let atag=document.querySelectorAll('a');
-        let i=0;
-        while(i<4){
-        atag[i].style.color=color1;
-        i=i+1;}
-            document.querySelector('h1').style.borderBottomColor=color2;
-            document.querySelector('#grid ul').style.borderRightColor=color2;
+    var list={  
+        ndhb: function(color1, color2){
+            let target=document.querySelector('body');
+            target.style.background=color1 ;
+            target.style.color=color2;
+        },
+        tagwallcolor: function(color1, color2){
+            let atag=document.querySelectorAll('a');
+            let i=0;
+            while(i<4){
+                atag[i].style.color=color1;
+                i=i+1;}
+                document.querySelector('h1').style.borderBottomColor=color2;
+                document.querySelector('#grid ul').style.borderRightColor=color2;
             }
+        }
 
-    function nightdayhandler(pointself){    
-    if(pointself.value==='day')
+        function nightdayhandler(pointself){
+                
+            if(pointself.value==='day')
     {
           pointself.value='night';
-          ndhb('black','white');
-          tagwallcolor('powderblue','white');
+          list.ndhb('black','white');
+          list.tagwallcolor('powderblue','white');
     }  
-
-      
-        else
+            else
         {
-            ndhb('white','black');
+            list.ndhb('white','black');
             document.querySelector('#night_day').value='day';
-            tagwallcolor('blue','black');
+            list.tagwallcolor('blue','black');
     }
-}
+            }
+        
 </script>
 </head>
 

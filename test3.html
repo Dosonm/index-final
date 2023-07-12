@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var list={
+            'a':'b',
+        }
+        list.changecolor=function(){
+            document.querySelector('h1').style.color='blue';
+        }
+    </script>
+    <h1>색변경</h1>
+    <script>
+        list.changecolor();
+        var twolist={
+            twochangcolor: function(){
+                document.querySelector('h2').style.color='green';
+            },
+           threechangcolor: function(){
+            document.querySelector('h3').style.color='red';
+           }
+        }
+    </script>
+    <h2>또다른 색변경</h2>
+    <script>
+        twolist.twochangcolor();
+    </script>
+    <input type="button" value="color" onclick="changecolor()">
+    <h3>세번째 색변경</h3>
+</body>
+</html>
