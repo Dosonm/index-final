@@ -5,8 +5,8 @@
 <title>final.html</title>
 <meta charset="utf-8">
 <link href="finalstyle.css" rel="stylesheet">
-<script>
-    //밑에서 함수를 호출해서 그 함수로 이동하면 그 함수내에 변수가 없기 때문에 읽어들일 수가 없음
+<script src="final.js"></script>
+    <!--밑에서 함수를 호출해서 그 함수로 이동하면 그 함수내에 변수가 없기 때문에 읽어들일 수가 없음
     //따라서 전역변수가 아닌 지역변수로 할당을해줘야 함수 호출해서 읽어 들일 때 변수를 읽을 수가 있음
     //let 변수선언은 중복선언이 불가능한데
     //let a=0;
@@ -17,44 +17,13 @@
     // let a=0; << 이건 가능함 이유는 저 함수 내에서 선언을 한거기 때문에   
     //}
     //따라서 함수를 호출하게되면 그함수로 가서 계산을 하기 때문에 전역변수로 밖에서 선언했다고 해도 의미가 없음
-    function ndhb(color1, color2){
-        let target=document.querySelector('body');
-        target.style.background=color1 ;
-        target.style.color=color2;
-    }
-    function tagwallcolor(color1, color2){
-        let atag=document.querySelectorAll('a');
-        let i=0;
-        while(i<4){
-        atag[i].style.color=color1;
-        i=i+1;}
-            document.querySelector('h1').style.borderBottomColor=color2;
-            document.querySelector('#grid ul').style.borderRightColor=color2;
-            }
-
-    function nightdayhandler(pointself){    
-    if(pointself.value==='day')
-    {
-          pointself.value='night';
-          ndhb('black','white');
-          tagwallcolor('powderblue','white');
-    }  
-
-      
-        else
-        {
-            ndhb('white','black');
-            document.querySelector('#night_day').value='day';
-            tagwallcolor('blue','black');
-    }
-}
-</script>
+    -->
 </head>
 
 <body>
     
     <input id=night_day type="button" value="day" onclick="
-        nightdayhandler(this)">
+        newlist.nightdayhandler(this)">
     <h1><a href="index.html" target="_blank">web</a></h1>
     <div id="ggrid">
 <ul>
